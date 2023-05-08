@@ -1,0 +1,285 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid grey;
+}
+.left-half {
+  display: flex;
+}
+.right-half {
+  display: flex;
+}
+.directory {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+}
+.resize {
+  display: flex;
+  align-items: flex-end;
+  text-align: start;
+  margin-left: -1.25rem;
+  /* margin-top: 1rem;
+  margin-bottom : 0.25rem; */
+}
+.size-up,
+.size-basic,
+.size-down {
+  margin-right: 0.5rem;
+}
+.size-up {
+  font-size: 1.5rem;
+}
+.size-down {
+  font-size: 0.75rem;
+}
+.size-basic {
+  font-size: 1rem;
+}
+.upper-directory {
+  display: flex;
+  justify-content: space-around;
+}
+.darkmode {
+  display: flex;
+  margin-bottom: 0.5rem;
+  text-align: start;
+}
+.language {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.hindi,
+.english {
+  margin-top: 0.25rem;
+}
+.english {
+  margin-left: 0.2rem;
+}
+.lang-divide {
+  margin-right: 0.15rem;
+}
+.hindi {
+  margin-right: 0.15rem;
+}
+.toggle-off,
+.toggle-on {
+  padding: 0.25rem;
+  border: 1px solid blue;
+  height: 1rem;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
+.toggle-on {
+  color: white;
+  background-color: blue;
+}
+nav {
+  /* margin: 2rem 0rem 0rem 0rem; */
+  /* padding : 1rem 0rem; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+/* .dropdown-selector
+{
+    padding : 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.dropdown-selector {
+  padding: 1rem 0.325rem;
+  font-size: 1rem;
+}
+.dropdown-selector:hover {
+  background-color: #e5ecf4;
+  flex-direction: column;
+}
+.selector:hover a {
+  font-weight: 600;
+}
+.dropdown-selector:hover .dropdown-content {
+  display: block;
+  background-color: #e5ecf4;
+}
+
+.selector {
+  display: flex;
+}
+.dropdown-content {
+  position: absolute;
+  padding: 0.25rem;
+  margin-left: -0.25rem;
+  width: auto;
+  display: none;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.dropdown-content .dropdown-list-item a:hover {
+  font-weight: 600;
+}
+.dropdown-content li {
+  padding-right: 6rem;
+  margin: 1rem 0rem;
+  list-style: none;
+}
+.selector a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+}
+#left-menu {
+  display: none;
+  height: 50rem;
+  width: 10rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar {
+  display: none;
+}
+.dropdown-selector-mobile {
+  padding: 0.5rem 0.2rem 0.5rem 1rem;
+  margin: 0.5rem 0rem;
+}
+.dropdown-selector-mobile p {
+  display: none;
+  font-family: "Lato", sans-serif;
+}
+
+@media only screen and (min-width: 1200px) {
+  /*Something in javascript was causing these to appear even when screen enlarged, so forced disable*/
+  .bottom-nav {
+    display: none;
+  }
+  .main-icons {
+    display: none;
+  }
+  #content-container
+  {
+    display: none;
+  }
+  hr
+  {
+    display: none;
+  }
+
+  .right-half {
+    width: 45%;
+  }
+  .search {
+    margin-left: 2rem;
+  }
+  .g20-logo {
+    width: 10rem;
+    margin-right: 2rem;
+  }
+  .mobile {
+    display: none;
+  }
+  .lower-directory {
+    display: flex;
+    justify-content: space-between;
+  }
+  .upper-directory {
+    border-bottom: 1px solid grey;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  /* .main-logo
+  {
+    width : 2rem;
+  } */
+  .desktop {
+    display: none;
+  }
+  header {
+    justify-content: space-between;
+  }
+  nav {
+    display: none;
+  }
+  .main-logo {
+    margin-left: 1rem;
+  }
+  #hamburger {
+    margin-left: 1rem;
+  }
+  .g20-logo {
+    width: 8rem;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  #content-container {
+    position: absolute;
+    /*remains in same place regardless of screen size*/
+    margin-top: -2rem;
+    left: 10rem;
+    top: 6rem;
+    padding: 0rem 0.5rem;
+    width: max(15rem, fit-content);
+    height: 50rem;
+    background-color: #f0f1f6;
+    display: flex;
+    flex-direction: column;
+  }
+  .expanded-content a {
+    color: black;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+  }
+  .expanded-content {
+    margin: 0rem 0rem 1.5rem 0rem;
+    padding: 0.25rem;
+  }
+  .main-icons {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin: 1rem 0rem;
+  }
+  .bottom-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1rem;
+    list-style: none;
+  }
+  .bottom-nav li {
+    margin: 0.25rem 0rem 0.25rem 0rem;
+  }
+  .resize,
+  .darkmode,
+  .language {
+    margin-left: 1rem;
+  }
+  .lower-directory-mobile {
+    padding: 3rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
